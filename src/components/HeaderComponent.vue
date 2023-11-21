@@ -10,7 +10,12 @@
         props: {
             mainTitle: String,
             subTitle: String
-        }
+        },
+        methods: {
+            ProductPage() {
+                this.$router.push('Product')
+            }
+        },
     }
 </script>
 
@@ -28,7 +33,7 @@
         <div class="header-banner">
             <h1 class="main-heading">{{ mainHeading }}</h1>
             <h3 class="sub-heading">{{ subHeading }}</h3>
-            <button type="button" class="main-button">{{ buttonText }}</button>
+            <button type="button" class="main-button" v-on:click="ProductPage()">{{ buttonText }}</button>
         </div>
     </header>
 </template>
